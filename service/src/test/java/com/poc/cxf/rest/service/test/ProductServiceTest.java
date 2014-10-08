@@ -5,6 +5,7 @@ import java.util.UUID;
 import javax.ws.rs.core.Response;
 
 import org.apache.cxf.jaxrs.client.Client;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,11 @@ public class ProductServiceTest {
     @Autowired
     private ProductService productService;
 
+    /**
+     * This tests the running server deployed on 8080 port.
+     * To change the base URI, change in test-beans.xml}
+     */
+    @Ignore
     @Test
     public void test() {
         Response response = productService.readProduct(UUID.randomUUID());
