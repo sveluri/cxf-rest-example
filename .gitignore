@@ -1,0 +1,17 @@
+# Maven
+target/
+test-output/
+overlays/
+
+# Eclipse
+.settings/
+.project
+.classpath
+.springBeans
+.metadata/
+Servers/
+
+# IntelliJ
+*.iml
+.idea/
+
