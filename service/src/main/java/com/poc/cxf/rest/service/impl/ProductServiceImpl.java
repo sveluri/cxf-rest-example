@@ -1,5 +1,7 @@
 package com.poc.cxf.rest.service.impl;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 import com.poc.cxf.rest.ProductService;
@@ -23,5 +25,17 @@ public class ProductServiceImpl implements ProductService {
     public Response readProduct(UUID productId) {
         Product product = new Product("Product1", "product1 description");
         return Response.ok(product).build();
+    }
+
+    @Override
+    public List<Product> readProducts() {
+        List<Product> products = new ArrayList<>();
+
+       products.add(new Product("Product1", "product1 description"));
+       products.add(new Product("Product2", "product2 description"));
+       products.add(new Product("Product3", "product3 description"));
+       products.add(new Product("Product4", "product4 description"));
+
+        return products;
     }
 }
