@@ -28,15 +28,24 @@ public class ProductServiceTest {
     @Autowired
     private ProductService productService;
 
+    static
+    {
+        Class clazz = org.springframework.beans.factory.support.BeanDefinitionBuilder.class;
+
+        String className = clazz.getName();
+        String resource = "/" + className.replace('.', '/') + ".class";
+        System.out.println("Class " + className + " loaded from URL : " + clazz.getResource(resource));
+    }
+
     /**
      * This tests the running server deployed on 8080 port.
      * To change the base URI, change in test-beans.xml}
      */
-    @Ignore
     @Test
     public void test() {
-        Response response = productService.readProduct(UUID.randomUUID());
-        Product product = response.readEntity(Product.class);
-        System.out.println(product);
+//        Response response = productService.readProduct(UUID.randomUUID());
+//        Product product = response.readEntity(Product.class);
+//        System.out.println(product);
+
     }
 }
