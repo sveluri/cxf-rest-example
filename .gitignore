@@ -15,3 +15,11 @@ Servers/
 *.iml
 .idea/
 
+class
+
+.classpath
+.git
+.project
+.class
+
+
